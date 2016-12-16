@@ -1,15 +1,26 @@
 ///scr_move_state()
 scr_get_input() ; // tastenbelegungs script callen
 
+    //Dash
 if (dash_key and len != 0 ) {
     state = scr_dash_state ;
     alarm[0] = room_speed / 6 ;
 } 
-
-if (attack_key) {
+    //Angriff
+if (attack_key) {   
     state = scr_attack_state ;
     image_index = 0 ;
 }
+    //collision mit eis
+if (collision_circle(x,y,5,obj_ice,false,true) and icecontact = false and state = scr_move_state){
+    icecontact = true ;
+                             // wenn kollision mit eis+ icecontact neg. , und man sich bewegt, 
+}                          //dann setzt es den eiscontact auf yes
+if (icecontact = true and len == 0){
+    lastdir = point_direction(xprevious,yprevious,x,y)
+    state = scr_slide_state ;
+    alarm[1] = 3 ;
+} 
 
 /// achsenbelegung + vektoren
 

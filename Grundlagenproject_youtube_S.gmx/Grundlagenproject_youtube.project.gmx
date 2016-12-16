@@ -45,6 +45,7 @@
       <sprite>sprites\sprite_wall_2</sprite>
     </sprites>
     <sprite>sprites\sprite21</sprite>
+    <sprite>sprites\spr_slide</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -58,6 +59,7 @@
       <script>scripts\scr_attack_state.gml</script>
       <script>scripts\scr_dash_state.gml</script>
       <script>scripts\scr_move_state.gml</script>
+      <script>scripts\scr_slide_state.gml</script>
     </scripts>
     <scripts name="helper states">
       <script>scripts\scr_get_face.gml</script>
