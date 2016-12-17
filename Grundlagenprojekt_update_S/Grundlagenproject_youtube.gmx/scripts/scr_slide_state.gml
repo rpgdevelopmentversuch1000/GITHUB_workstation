@@ -2,7 +2,7 @@
 
 //impuls 
     with (self){
-    physics_apply_impulse(x,y,lasthspd,lastvspd) ; //wird durch timer ausgelöscht
+    physics_apply_local_impulse(x,y,lasthspd,lastvspd) ; //wird durch timer ausgelöscht
     } 
 
 // Angriff auf eis
