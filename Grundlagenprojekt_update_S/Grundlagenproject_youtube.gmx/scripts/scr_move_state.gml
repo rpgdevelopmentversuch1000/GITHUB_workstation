@@ -66,13 +66,13 @@ if (attack_key) {
 
 // Collision mit eis
     
-    if (collision_circle(x,y,2,obj_ice,false,true) and icecontact = false and state = scr_move_state){
+    if (collision_point(x,y,obj_ice,false,true) and icecontact = false){
     icecontact = true ;
     
                          // wenn kollision mit eis + icecontact -false. , und man sich bewegt, 
 }                        // ann setzt es den eiscontact -true
 
-    if (collision_circle(x,y,2,obj_ice,false,true) and icecontact = true)
+    if (collision_point(x,y,obj_ice,false,true) and icecontact = true)
     {    
         switch (len){        
             case spd:    // geschwindigkeit 3
@@ -85,7 +85,6 @@ if (attack_key) {
                 state = scr_slide_state ; 
                 icecontact = false ; 
                 alarm[1] = 2;
-                 
             break ;               
             }
     }
